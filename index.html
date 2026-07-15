@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Metric | Digital Marketing Agency</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Modern Minimalist Reset & CSS Variables */
+        :root {
+            --bg-dark: #0a0f1d;
+            --card-bg: #111827;
+            --text-light: #f3f4f6;
+            --text-gray: #9ca3af;
+            --accent: #2563eb; /* Royal Blue Accent */
+            --accent-hover: #1d4ed8;
+            --success: #10b981; /* WhatsApp Green */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Container Utility */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navigation */
+        header {
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            position: sticky;
+            top: 0;
+            background: rgba(10, 15, 29, 0.8);
+            backdrop-filter: blur(12px);
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(45deg, #ffffff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-links a {
+            color: var(--text-gray);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-light);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 0 80px 0;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+            letter-spacing: -1px;
+        }
+
+        h1 span {
+            background: linear-gradient(45deg, var(--accent), #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-gray);
+            max-width: 650px;
+            margin: 0 auto 40px auto;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-light);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Services Grid */
+        .services {
+            padding: 80px 0;
+            background-color: rgba(255, 255, 255, 0.01);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .section-header p {
+            color: var(--text-gray);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 40px 30px;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(37, 99, 235, 0.2);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
+        }
+
+        .card-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .card h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        /* About / Mission Section */
+        .about {
+            padding: 80px 0;
+        }
+
+        .about-box {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .about-box h3 {
+            font-size: 1.75rem;
+            margin-bottom: 20px;
+        }
+
+        .about-box p {
+            color: var(--text-gray);
+            font-size: 1.05rem;
+            margin-bottom: 24px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-dark), #111827);
+        }
+
+        .whatsapp-btn {
+            background-color: var(--success);
+            color: #ffffff;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 36px;
+            font-size: 1.1rem;
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: center;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.25rem;
+            }
+            .about-box {
+                padding: 30px 20px;
+            }
+            .nav-links {
+                display: none; /* Keep it simple for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">Apex Metric</div>
+            <nav class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <span class="badge">Results-Driven Digital Agency</span>
+            <h1>Scale Your Brand with <span>Apex Metric</span></h1>
+            <p>We combine data-driven execution with cutting-edge local SEO, pay-per-click advertising, and social media management to skyrocket your revenue.</p>
+            <div class="cta-group">
+                <a href="#contact" class="btn btn-primary">Get Free Strategy Call</a>
+                <a href="#services" class="btn btn-secondary">Explore Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Capabilities</h2>
+                <p>Tailored strategies designed to find, engage, and convert your ideal customers.</p>
+            </div>
+            <div class="grid">
+                <!-- Service 1 -->
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>Search Engine Optimization (SEO)</h3>
+                    <p>Dominating search listings is a long-term compound asset. We optimize your local profiles and structure on-page strategies to target buyers searching for you.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Social Media Marketing (SMM)</h3>
+                    <p>Turning attention into currency. We construct clean aesthetic frameworks, produce highly engaging copies, and design platforms to grow a loyal audience.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Paid Media (PPC Ads)</h3>
+                    <p>Stop guessing with ad budgets. We research and implement hyper-targeted campaigns across Facebook and Google to make sure your spend turns into positive ROI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-box">
+                <h3>Built for Transparent Growth</h3>
+                <p>At Apex Metric, we don't focus on vanity metrics. We focus on transparent reporting and measurable growth. Whether you are looking to rank higher locally on Google, build a beautiful social footprint, or scale conversion paths, we operate as an extension of your own team to execute the target business goals.</p>
+                <div style="font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--accent);">Gujranwala, Pakistan &bull; Available Globally</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action / Contact -->
+    <section id="contact" class="cta-section">
+        <div class="container">
+            <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 20px;">Ready to Scale Your Digital Footprint?</h2>
+            <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto 40px auto; font-size: 1.1rem;">
+                Don't spend thousands on marketing strategies that don't convert. Book a 100% free, 15-minute consultation with us on WhatsApp to discuss your path.
+            </p>
+            <!-- Put your WhatsApp URL here -->
+            <a href="https://wa.me/923338275280?text=Hi%20Apex%20Metric,%20I'd%20like%20to%20book%20a%20free%20strategy%20call!" class="btn whatsapp-btn" target="_blank">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor;">
+                    <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.848.502 3.578 1.378 5.067L2 22l5.093-1.334c1.432.782 3.074 1.229 4.815 1.229 5.524 0 10.004-4.48 10.004-10.004C21.912 6.48 17.528 2 12.004 2zm5.727 14.167c-.246.695-1.21 1.265-1.677 1.332-.44.062-.876.104-2.822-.663-2.486-.98-4.08-3.52-4.205-3.687-.125-.166-1.02-1.356-1.02-2.585 0-1.229.646-1.834.875-2.083.23-.25.498-.312.666-.312.167 0 .334.002.48.01.147.008.334-.055.522.396.188.459.646 1.583.709 1.708.062.125.104.27.02.437-.083.167-.125.27-.25.417-.125.146-.263.327-.375.44-.125.125-.256.26-.11.512.146.25.646 1.066 1.385 1.722.954.846 1.758 1.11 2.008 1.235.25.125.396.104.542-.062.146-.167.625-.729.792-.98.167-.25.334-.208.563-.125.23.083 1.458.687 1.708.812.25.125.417.188.48.292.062.104.062.604-.184 1.302z"/>
+                </svg>
+                Book Your WhatsApp Consultation
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Apex Metric. All rights reserved.</p>
+            <p style="font-size: 0.8rem; margin-top: 8px; color: #52525b;">Designed for transparency and local impact.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
