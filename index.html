@@ -3,424 +3,264 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Metric | Digital Marketing Agency</title>
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Apex Metric",
-  "url": "https://maazabdullah333.github.io/apex-metric/",
-  "telephone": "0333 8275280",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Gujranwala",
-    "addressRegion": "Punjab",
-    "addressCountry": "PK"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 32.1617,
-    "longitude": 74.1883
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Sunday"
-      ],
-      "opens": "09:00",
-      "closes": "23:00"
-    },
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Saturday",
-      "opens": "09:00",
-      "closes": "22:30"
-    }
-  ]
-}
-</script>
-    
-    <style>
-        /* Modern Minimalist Reset & CSS Variables */
-        :root {
-            --bg-dark: #0a0f1d;
-            --card-bg: #111827;
-            --text-light: #f3f4f6;
-            --text-gray: #9ca3af;
-            --accent: #2563eb; /* Royal Blue Accent */
-            --accent-hover: #1d4ed8;
-            --success: #10b981; /* WhatsApp Green */
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Container Utility */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        /* Navigation */
-        header {
-            padding: 20px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            position: sticky;
-            top: 0;
-            background: rgba(10, 15, 29, 0.8);
-            backdrop-filter: blur(12px);
-            z-index: 100;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
-            background: linear-gradient(45deg, #ffffff, var(--accent));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .nav-links a {
-            color: var(--text-gray);
-            text-decoration: none;
-            margin-left: 24px;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--text-light);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 100px 0 80px 0;
-            text-align: center;
-        }
-
-        .badge {
-            display: inline-block;
-            background: rgba(37, 99, 235, 0.1);
-            color: var(--accent);
-            padding: 6px 16px;
-            border-radius: 100px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 24px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            line-height: 1.2;
-            margin-bottom: 24px;
-            letter-spacing: -1px;
-        }
-
-        h1 span {
-            background: linear-gradient(45deg, var(--accent), #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            color: var(--text-gray);
-            max-width: 650px;
-            margin: 0 auto 40px auto;
-        }
-
-        .cta-group {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 14px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s;
-        }
-
-        .btn-primary {
-            background-color: var(--accent);
-            color: #ffffff;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background-color: rgba(255, 255, 255, 0.05);
-            color: var(--text-light);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-        }
-
-        /* Services Grid */
-        .services {
-            padding: 80px 0;
-            background-color: rgba(255, 255, 255, 0.01);
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 60px;
-        }
-
-        .section-header h2 {
-            font-size: 2.25rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-
-        .section-header p {
-            color: var(--text-gray);
-            max-width: 500px;
-            margin: 0 auto;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .card {
-            background-color: var(--card-bg);
-            border: 1px solid rgba(255, 255, 255, 0.03);
-            border-radius: 12px;
-            padding: 40px 30px;
-            transition: all 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(37, 99, 235, 0.2);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7);
-        }
-
-        .card-icon {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--accent);
-        }
-
-        .card h3 {
-            font-size: 1.35rem;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .card p {
-            color: var(--text-gray);
-            font-size: 0.95rem;
-            margin-bottom: 20px;
-        }
-
-        /* About / Mission Section */
-        .about {
-            padding: 80px 0;
-        }
-
-        .about-box {
-            background-color: var(--card-bg);
-            border-radius: 16px;
-            padding: 50px;
-            border: 1px solid rgba(255, 255, 255, 0.03);
-        }
-
-        .about-box h3 {
-            font-size: 1.75rem;
-            margin-bottom: 20px;
-        }
-
-        .about-box p {
-            color: var(--text-gray);
-            font-size: 1.05rem;
-            margin-bottom: 24px;
-        }
-
-        /* CTA Section */
-        .cta-section {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(180deg, var(--bg-dark), #111827);
-        }
-
-        .whatsapp-btn {
-            background-color: var(--success);
-            color: #ffffff;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 16px 36px;
-            font-size: 1.1rem;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #059669;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
-        }
-
-        /* Footer */
-        footer {
-            padding: 40px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-            color: var(--text-gray);
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Breakpoints */
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 2.25rem;
-            }
-            .about-box {
-                padding: 30px 20px;
-            }
-            .nav-links {
-                display: none; /* Keep it simple for mobile */
+    <title>Apex Metric Marketing Agency | Data-Driven Growth</title>
+    <!-- Tailwind CSS CDN for modern, clean utility styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandPrimary: '#0f172a', /* Deep Slate */
+                        brandAccent: '#2563eb',  /* Vibrant Blue */
+                        brandSuccess: '#10b981' /* Growth Green */
+                    }
+                }
             }
         }
-    </style>
+    </script>
 </head>
-<body>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
     <!-- Header / Navigation -->
-    <header>
-        <div class="container nav-container">
-            <div class="logo">Apex Metric</div>
-            <nav class="nav-links">
-                <a href="#services">Services</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
+    <header class="bg-white border-b border-slate-100 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="bg-blue-600 text-white p-2 rounded-lg font-bold text-xl tracking-tight">AM</div>
+                <span class="text-xl font-bold text-slate-900 tracking-tight">Apex Metric <span class="text-blue-600 font-medium">Marketing Agency</span></span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-600">
+                <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                <a href="#why-choose-us" class="hover:text-blue-600 transition">Why Us</a>
+                <a href="#case-studies" class="hover:text-blue-600 transition">Case Studies</a>
+                <a href="#book-call" class="hover:text-blue-600 transition">Book a Call</a>
             </nav>
+            <div>
+                <a href="#audit" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold hover:bg-blue-700 transition shadow-sm">
+                    Free SEO Audit
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <span class="badge">Results-Driven Digital Agency</span>
-            <h1>Scale Your Brand with <span>Apex Metric</span></h1>
-            <p>We combine data-driven execution with cutting-edge local SEO, pay-per-click advertising, and social media management to skyrocket your revenue.</p>
-            <div class="cta-group">
-                <a href="#contact" class="btn btn-primary">Get Free Strategy Call</a>
-                <a href="#services" class="btn btn-secondary">Explore Services</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Core Capabilities</h2>
-                <p>Tailored strategies designed to find, engage, and convert your ideal customers.</p>
-            </div>
-            <div class="grid">
-                <!-- Service 1 -->
-                <div class="card">
-                    <div class="card-icon">📈</div>
-                    <h3>Search Engine Optimization (SEO)</h3>
-                    <p>Dominating search listings is a long-term compound asset. We optimize your local profiles and structure on-page strategies to target buyers searching for you.</p>
-                </div>
-                <!-- Service 2 -->
-                <div class="card">
-                    <div class="card-icon">📱</div>
-                    <h3>Social Media Marketing (SMM)</h3>
-                    <p>Turning attention into currency. We construct clean aesthetic frameworks, produce highly engaging copies, and design platforms to grow a loyal audience.</p>
-                </div>
-                <!-- Service 3 -->
-                <div class="card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Paid Media (PPC Ads)</h3>
-                    <p>Stop guessing with ad budgets. We research and implement hyper-targeted campaigns across Facebook and Google to make sure your spend turns into positive ROI.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="about-box">
-                <h3>Built for Transparent Growth</h3>
-                <p>At Apex Metric, we don't focus on vanity metrics. We focus on transparent reporting and measurable growth. Whether you are looking to rank higher locally on Google, build a beautiful social footprint, or scale conversion paths, we operate as an extension of your own team to execute the target business goals.</p>
-                <div style="font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase; color: var(--accent);">Gujranwala, Pakistan &bull; Available Globally</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call To Action / Contact -->
-    <section id="contact" class="cta-section">
-        <div class="container">
-            <h2 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 20px;">Ready to Scale Your Digital Footprint?</h2>
-            <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto 40px auto; font-size: 1.1rem;">
-                Don't spend thousands on marketing strategies that don't convert. Book a 100% free, 15-minute consultation with us on WhatsApp to discuss your path.
+    <!-- Hero Section (Upgraded CTA) -->
+    <section class="py-20 lg:py-32 bg-gradient-to-b from-slate-900 to-slate-950 text-white">
+        <div class="max-w-5xl mx-auto px-4 text-center">
+            <span class="text-blue-400 text-sm font-semibold uppercase tracking-wider bg-blue-900/40 px-3 py-1.5 rounded-full">Data-Driven Growth Agency</span>
+            <h1 class="mt-6 text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                Stop Guessing. Scale with <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Precision Metrics</span>.
+            </h1>
+            <p class="mt-6 text-lg sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
+                We craft performance-focused campaigns that turn search traffic into verifiable revenue. Claim your complimentary diagnostic audits below.
             </p>
-            <!-- Put your WhatsApp URL here -->
-            <a href="https://wa.me/923338275280?text=Hi%20Apex%20Metric,%20I'd%20like%20to%20book%20a%20free%20strategy%20call!" class="btn whatsapp-btn" target="_blank">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="fill: currentColor;">
-                    <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.848.502 3.578 1.378 5.067L2 22l5.093-1.334c1.432.782 3.074 1.229 4.815 1.229 5.524 0 10.004-4.48 10.004-10.004C21.912 6.48 17.528 2 12.004 2zm5.727 14.167c-.246.695-1.21 1.265-1.677 1.332-.44.062-.876.104-2.822-.663-2.486-.98-4.08-3.52-4.205-3.687-.125-.166-1.02-1.356-1.02-2.585 0-1.229.646-1.834.875-2.083.23-.25.498-.312.666-.312.167 0 .334.002.48.01.147.008.334-.055.522.396.188.459.646 1.583.709 1.708.062.125.104.27.02.437-.083.167-.125.27-.25.417-.125.146-.263.327-.375.44-.125.125-.256.26-.11.512.146.25.646 1.066 1.385 1.722.954.846 1.758 1.11 2.008 1.235.25.125.396.104.542-.062.146-.167.625-.729.792-.98.167-.25.334-.208.563-.125.23.083 1.458.687 1.708.812.25.125.417.188.48.292.062.104.062.604-.184 1.302z"/>
-                </svg>
-                Book Your WhatsApp Consultation
-            </a>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#audit" class="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl font-bold text-base transition transform hover:-translate-y-0.5 shadow-lg shadow-emerald-900/20 flex items-center justify-center gap-2">
+                    <i class="fas fa-search-dollar"></i> Get a Free 15-Minute SEO Audit
+                </a>
+                <a href="#book-call" class="w-full sm:w-auto bg-slate-800 hover:bg-slate-700 text-slate-100 border border-slate-700 px-8 py-4 rounded-xl font-bold text-base transition flex items-center justify-center gap-2">
+                    <i class="far fa-calendar-alt"></i> Book a Strategy Call
+                </a>
+            </div>
+            <div class="mt-8 text-xs text-slate-400 flex items-center justify-center gap-4">
+                <span><i class="fas fa-check text-emerald-400 mr-1"></i> No Credit Card Required</span>
+                <span>•</span>
+                <span><i class="fas fa-check text-emerald-400 mr-1"></i> 100% Free Strategy Blueprint</span>
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Apex Metric. All rights reserved.</p>
-            <p style="font-size: 0.8rem; margin-top: 8px; color: #52525b;">Designed for transparency and local impact.</p>
+    <!-- NEW SECTION: Why Choose Us (Grid-Based Performance Guarantees) -->
+    <section id="why-choose-us" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight sm:text-4xl">
+                    Why Local Businesses Trust Apex Metric
+                </h2>
+                <p class="mt-4 text-lg text-slate-600">
+                    We've eliminated the fluff of typical marketing agencies. Here are our non-negotiable standards of performance.
+                </p>
+            </div>
+
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-blue-100 text-blue-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Data-Driven Decisions</h3>
+                    <p class="mt-3 text-slate-600 leading-relaxed text-sm">
+                        We don't optimize based on hunches. Every campaign tweak, budget allocation, and target keyword is backed by hard analytics and search telemetry.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-emerald-100 text-emerald-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fas fa-file-invoice"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Weekly Transparent Reporting</h3>
+                    <p class="mt-3 text-slate-600 leading-relaxed text-sm">
+                        No confusing monthly jargon-filled emails. You receive a direct, straightforward weekly metrics update outlining click growth, conversions, and target improvements.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-slate-50 border border-slate-100 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-purple-100 text-purple-600 w-12 h-12 rounded-xl flex items-center justify-center text-xl mb-6">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900">Certified Experts</h3>
+                    <p class="mt-3 text-slate-600 leading-relaxed text-sm">
+                        Our strategists carry verified industry certificates in Google Search Ads, Meta Blueprint, and advanced analytics, meaning your ad capital is managed by trained professionals.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Case Study (Problem -> Solution -> Results Narrative) -->
+    <section id="case-studies" class="py-20 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight sm:text-4xl">
+                    Proven Results in Action
+                </h2>
+                <p class="mt-4 text-lg text-slate-600">
+                    See exactly how our strategic workflow drives measurable impact for our clients.
+                </p>
+            </div>
+
+            <!-- Case Study Container Card -->
+            <div class="mt-16 bg-white border border-slate-200 rounded-3xl shadow-sm overflow-hidden">
+                <div class="p-8 sm:p-12">
+                    <div class="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 pb-6 mb-8">
+                        <div>
+                            <span class="text-blue-600 font-semibold text-xs tracking-wider uppercase bg-blue-50 px-2.5 py-1 rounded">Case Study: E-Commerce</span>
+                            <h3 class="text-2xl font-bold text-slate-900 mt-2">Scale Campaign: Tirmizi Law Associates &amp; E-Retailer</h3>
+                        </div>
+                        <div class="text-slate-500 text-sm">
+                            <strong>Service:</strong> Organic Local SEO &amp; Ad Optimization
+                        </div>
+                    </div>
+
+                    <!-- Flow Matrix: Problem, Solution, Results -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Problem -->
+                        <div class="space-y-3">
+                            <span class="text-rose-500 font-semibold uppercase tracking-wider text-xs flex items-center gap-1.5">
+                                <i class="fas fa-exclamation-triangle"></i> The Problem
+                            </span>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                The client suffered from invisible local search visibility. They relied heavily on irregular word-of-mouth referrals, leaving their calendar empty during midweek.
+                            </p>
+                        </div>
+
+                        <!-- Solution -->
+                        <div class="space-y-3">
+                            <span class="text-blue-600 font-semibold uppercase tracking-wider text-xs flex items-center gap-1.5">
+                                <i class="fas fa-tools"></i> The Solution
+                            </span>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                We redesigned their Google Business listing, targeted low-competition transaction intent keywords locally, and streamlined their customer booking conversion funnel.
+                            </p>
+                        </div>
+
+                        <!-- Results -->
+                        <div class="space-y-3 bg-emerald-50/50 p-4 rounded-xl border border-emerald-100">
+                            <span class="text-emerald-600 font-semibold uppercase tracking-wider text-xs flex items-center gap-1.5">
+                                <i class="fas fa-chart-line"></i> The Results
+                            </span>
+                            <ul class="text-sm text-slate-700 font-semibold space-y-2 mt-2">
+                                <li class="flex items-center text-emerald-800">
+                                    <i class="fas fa-arrow-up mr-2 text-emerald-600"></i> +280% Local Search Traffic
+                                </li>
+                                <li class="flex items-center text-emerald-800">
+                                    <i class="fas fa-arrow-up mr-2 text-emerald-600"></i> 4.9★ Average Listing Rating
+                                </li>
+                                <li class="flex items-center text-emerald-800">
+                                    <i class="fas fa-arrow-up mr-2 text-emerald-600"></i> +14 New Bookings / Month
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Interactive Audit Form & Scheduler Integration -->
+    <section id="audit" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-slate-900 tracking-tight">Claim Your Free Growth Audit</h2>
+                <p class="mt-4 text-lg text-slate-600">
+                    No sales pitch. Just direct, actionable steps to instantly rank higher on search engines.
+                </p>
+            </div>
+
+            <div class="mt-12 bg-slate-50 border border-slate-200 rounded-2xl p-8 shadow-sm">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700">Your Name</label>
+                            <input type="text" placeholder="John Doe" required class="mt-1 block w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 bg-white">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-slate-700">Business Email</label>
+                            <input type="email" placeholder="john@company.com" required class="mt-1 block w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 bg-white">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700">Website URL (Optional)</label>
+                        <input type="url" placeholder="https://yourbusiness.com" class="mt-1 block w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-blue-600 bg-white">
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl transition shadow-md shadow-blue-200">
+                        Analyze My Website &amp; Build My Free Plan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW SECTION: Interactive Scheduler Block -->
+    <section id="book-call" class="py-20 bg-slate-900 text-white border-t border-slate-800">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold tracking-tight">Ready to Fast-Track Your Revenue?</h2>
+            <p class="mt-4 text-lg text-slate-300 max-w-2xl mx-auto">
+                Select an open time slot below to map out a personalized 15-minute digital growth blueprint directly with our experts.
+            </p>
+
+            <!-- Calendly / Scheduler Embed Container -->
+            <div class="mt-12 bg-slate-800 border border-slate-700 rounded-2xl p-1 overflow-hidden shadow-2xl">
+                <!-- 
+                  Integration Note: To go live, replace this placeholder block 
+                  with your real custom Calendly iframe widget code:
+                  https://help.calendly.com/hc/en-us/articles/223147027-How-to-embed-Calendly-on-your-website
+                -->
+                <div class="bg-slate-950 p-12 text-center rounded-xl min-h-[400px] flex flex-col justify-center items-center">
+                    <i class="far fa-calendar-check text-blue-500 text-5xl mb-4"></i>
+                    <h3 class="text-xl font-bold">Interactive Booking Calendar</h3>
+                    <p class="text-slate-400 max-w-md mx-auto mt-2 text-sm">
+                        To activate this scheduler, paste your Calendly script code inside this block!
+                    </p>
+                    <a href="https://calendly.com" target="_blank" rel="noopener" class="mt-6 inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold text-sm transition">
+                        Setup Calendly Calendar <i class="fas fa-external-link-alt text-xs"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Area -->
+    <footer class="bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center space-x-2">
+                <span class="text-white font-bold text-lg">Apex Metric Marketing Agency</span>
+            </div>
+            <p class="text-xs">
+                &copy; 2025 Apex Metric Marketing Agency. All Rights Reserved. Built with clean analytics.
+            </p>
         </div>
     </footer>
 
